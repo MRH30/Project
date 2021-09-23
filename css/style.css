@@ -862,6 +862,20 @@ a{
       padding-bottom: 12%;
     }
 
+    .btn1{
+      position: relative;
+      left: 120px
+    }
+
+    .image{
+      min-height: 40vh;
+    }
+
+    #login{
+      position: relative;
+      left: 75px;
+    }
+
 
 
 }
