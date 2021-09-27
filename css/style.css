@@ -561,6 +561,8 @@ header #menu{
     background:url(../images/teachers.jfif) no-repeat;
     background-size: cover;
     background-position: bottom;
+    background-position: center center;
+
 }
 
 .teacher p{
@@ -873,7 +875,14 @@ a{
 
     #login{
       position: relative;
-      left: 75px;
+      left: 50px;
+    }
+
+
+    .teacher{
+      background-size: cover;
+      background-position: bottom;
+      background-position: center center;
     }
 
 

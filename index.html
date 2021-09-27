@@ -61,10 +61,10 @@
 
 <div class="login-form">
 
-    <form action="">
+    <form name="f1" action="login.php" method="POST" onsubmit="return validation()">
         <h3>Student Login</h3>
-        <input type="email" placeholder="username" class="box">
-        <input type="password" placeholder="password" class="box">
+        <input type="email" name="username" placeholder="username" class="box" id="user">
+        <input type="password" name="password" placeholder="password" class="box" id="pass">
         <p>Forgot Password? <a href="#">Click Here</a></p>
         <p>Don't have an account? <a href="#">Register Now</a></p>
         <input type="submit" class="btn" value="Login">
@@ -72,13 +72,37 @@
     </form>
 
     </div>
+    <script>
+          
+          function validation()  
+            {  
+                var id=document.f1.user.value;  
+                var ps=document.f1.pass.value;  
+                if(id.length=="" && ps.length=="") {  
+                    alert("User Name and Password fields are empty");  
+                    return false;  
+                }  
+                else  
+                {  
+                    if(id.length=="") {  
+                        alert("User Name is empty");  
+                        return false;  
+                    }   
+                    if (ps.length=="") {  
+                    alert("Password field is empty");  
+                    return false;  
+                    }  
+                }                             
+            }  
+        
+    </script>
 
     <div class="admin-form">
 
         <form action="">
             <h3>Admin Login</h3>
-            <input type="email" placeholder="username" class="box">
-            <input type="password" placeholder="password" class="box">
+            <input type="email" name="username" placeholder="username" class="box" >
+            <input type="password" name="password" placeholder="password" class="box">
             <p>Forgot Password? <a href="#">Click Here</a></p>
             <p>Don't have an account? <a href="#">Register Now</a></p>
             <input type="submit" class="btn" value="Login">
@@ -359,12 +383,12 @@
 
 <div class="row">
 
-    <form action="">
-        <input type="text" placeholder="full name" class="box">
-        <input type="email" placeholder="your email" class="box">
-        <input type="password" placeholder="your password" class="box">
-        <input type="number" placeholder="your number" class="box">
-        <textarea name="" id="" cols="30" rows="10" class="box address" placeholder="your address"></textarea>
+    <form action="form.php" method="POST">
+        <input type="text" name="name" placeholder="full name" class="box">
+        <input type="email" name="email" placeholder="your email" class="box">
+        <input type="password" name="password" placeholder="your password" class="box">
+        <input type="number" name="number" placeholder="your number" class="box">
+        <textarea name="address" id="" cols="30" rows="10" class="box address"  placeholder="your address"></textarea>
         <input type="submit" class="btn bt" value="Send Now">
     </form>
 
@@ -395,12 +419,12 @@
 
         <div class="box">
             <h3>Quick Links</h3>
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Departments</a>
-            <a href="#">Electives</a>
-            <a href="#">Amenities</a>
-            <a href="#">Contact Us</a>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#course">Departments</a>
+            <a href="#teacher">Electives</a>
+            <a href="#Amenities">Amenities</a>
+            <a href="#contact">Contact Us</a>
         </div>
 
         <div class="box">
@@ -412,7 +436,7 @@
 
     </div>
 
-    <h1 class="credit">© Copyright&nbsp;<a href="#">ASPIRE ACADMY</a> All Rights Reserved. </h1>
+    <h1 class="credit">© Copyright&nbsp;<a href="#">ASPIRE ACADEMY</a> All Rights Reserved. </h1>
 
 </div>
 
